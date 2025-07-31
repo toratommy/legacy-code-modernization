@@ -394,20 +394,6 @@ When you run `/init` in your project, Claude Code creates a `CLAUDE.md` file tha
 - Identify critical test cases based on business logic complexity
 ```
 
-**Using the Documentation:**
-
-```bash
-claude
-```
-
-```
-> Convert this legacy ETL script to Python using the patterns in CLAUDE.md:
-
-[paste legacy ETL code]
-
-Converting based on your documented patterns. Preserving PII encryption and audit requirements...
-```
-
 **Benefits:**
 - **Persistent Knowledge**: Documentation stays with your project across all sessions
 - **Team Sharing**: When checked into version control, entire team benefits
