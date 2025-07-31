@@ -1,14 +1,14 @@
-# Legacy Code Modernization with AI: Breaking Through Context Window Barriers
+# Legacy Code Modernization with Claude Code: Breaking Through Context Window Barriers
 
-Every enterprise architect has faced it: that sprawling COBOL system running critical billing operations, the Visual Basic 6 application that somehow still processes payroll, or the massive Java 1.4 codebase that powers customer management but hasn't been meaningfully updated in over a decade. These systems contain decades of refined business logic, regulatory compliance rules, and institutional knowledge—but they're built on foundations that are increasingly expensive to maintain and impossible to extend.
+Every enterprise architect has faced it: that sprawling COBOL system running critical billing operations, the Visual Basic 6 application that somehow still processes payroll, or the massive Java 1.4 codebase that powers customer management but hasn't been meaningfully updated in over a decade. These systems contain decades of refined business logic, regulatory compliance rules, and institutional knowledge. But they're built on foundations that are increasingly expensive to maintain and impossible to extend.
 
-Legacy code modernization has long been one of software engineering's most dreaded undertakings. Traditional approaches require armies of developers to manually translate code line by line, often taking years and costing millions, with alarming failure rates. The fundamental challenge isn't just converting syntax—it's understanding decades of business logic, preserving institutional knowledge embedded in code comments and architectural decisions, and maintaining functionality while adapting to modern architectures.
+Legacy code modernization has long been one of software engineering's most dreaded undertakings. Traditional approaches are brutal. They require armies of developers to manually translate code line by line, often taking years and costing millions, with alarming failure rates. The fundamental challenge isn't just converting syntax. It's understanding decades of business logic, preserving institutional knowledge embedded in code comments and architectural decisions, and maintaining functionality while adapting to modern architectures.
 
-But artificial intelligence is fundamentally changing this equation. AI systems don't just translate syntax; they understand business intent, recognize architectural patterns, and can reason about code at multiple abstraction levels simultaneously. The key insight is treating legacy modernization as a translation problem, where AI serves as an interpreter between different eras of software development.
+Agentic coding tools such as Claude Code change this dynamic significantly. Coding agents can translate syntax while understanding business intent, recognizing architectural patterns, and reasoning about code at multiple abstraction levels. The key insight is treating legacy modernization as a translation problem, where AI serves as an interpreter between different eras of software development.
 
 ## The Context Window Challenge
 
-The biggest practical obstacle in AI-powered legacy modernization isn't conceptual—it's computational. Enterprise codebases are massive, but even the most advanced AI models can only process a fraction of that code in a single request. Consider a typical legacy system:
+The biggest practical obstacle in AI-powered legacy modernization isn't conceptual. It's computational. Enterprise codebases are massive. Even the most advanced AI models can only process a fraction of that code in a single request. Consider a typical legacy system:
 
 - **500,000+ lines of core business logic** spread across hundreds of modules
 - **Complex interdependencies** where changes in one module can break seemingly unrelated functionality
@@ -16,9 +16,9 @@ The biggest practical obstacle in AI-powered legacy modernization isn't conceptu
 - **Database schemas** with hundreds of tables, stored procedures, and intricate relationships built up over decades
 - **Integration points** with other internal systems, each with their own data formats and protocols
 
-No AI model can process an entire enterprise codebase in one pass. A single business-critical module might be 5,000-10,000 lines of tightly coupled logic—pushing the boundaries of even large context windows. This means successful modernization requires a strategic, multi-step approach that breaks the problem into manageable pieces while preserving the relationships between them.
+No LLM can process an entire enterprise codebase in one pass. A single business-critical module might be 5,000-10,000 lines of tightly coupled logic, pushing the boundaries of even large context windows. Successful modernization requires a strategic, multi-step approach. You need to break the problem into manageable pieces while preserving the relationships between them.
 
-## Multi-Step Agentic Workflows: The Solution
+## Multi-Step Agentic Workflows: A Practical Approach
 
 The solution lies in using Claude Code's natural language interface to systematically work through modernization challenges in manageable phases. Rather than trying to process entire legacy systems at once, we can use Claude Code's codebase understanding and file editing capabilities to tackle modernization incrementally while preserving business logic.
 
@@ -36,51 +36,37 @@ claude --plan
 
 Then you can have a structured planning conversation:
 ```
-> I need to modernize this COBOL billing system. Please create a comprehensive 
-  modernization plan that includes:
-  1. Analysis of the current system architecture
-  2. Identification of core business logic modules and dependencies
-  3. Risk assessment for each component
-  4. Recommended modernization sequence
-  5. Resource estimates and timeline
-
-  Start by exploring the codebase to understand the system structure.
+> Analyze this COBOL billing system and create a modernization plan. Include 
+  architecture analysis, core modules, dependencies, risks, and recommended sequence.
 ```
 
 **What Claude Code Actually Does:**
-- **Explores your codebase automatically**: Reads files, understands directory structure, and identifies entry points without you manually adding files to context
-- **Maps dependencies and relationships**: Understands how modules interact by analyzing imports, function calls, and data flow
-- **Extracts business logic patterns**: Identifies repeated calculations, validation rules, and business constraints in the code
-- **Suggests prioritization strategy**: Recommends which modules to modernize first based on complexity, business impact, and dependencies
+- Explores codebase automatically and identifies entry points
+- Maps dependencies and relationships between modules  
+- Extracts business logic patterns and validation rules
+- Suggests prioritization strategy based on complexity and impact
 
 **Example Claude Code Analysis Session:**
 ```
-> I've analyzed your COBOL billing system. Here's what I found:
+Analyzed COBOL billing system structure:
 
-CORE BUSINESS MODULES:
-1. BILLING-CALC.COB (4,200 lines) - Main rate calculation engine
-   - Contains critical discount and tax calculation logic
-   - Self-contained with clear input/output boundaries
-   - HIGH PRIORITY: Core business logic, moderate complexity
+Core modules (by priority):
+1. BILLING-CALC.COB - Rate calculation engine  
+   Self-contained, critical business logic
 
-2. CUSTOMER-TIER.COB (2,800 lines) - Customer classification
-   - Determines customer tiers and discount eligibility  
-   - Interfaces with external credit rating system
-   - MEDIUM PRIORITY: Important but depends on billing calc
+2. CUSTOMER-TIER.COB - Customer classification
+   Depends on billing calc, interfaces with credit system
 
-3. INVOICE-GEN.COB (8,500 lines) - Invoice generation and formatting
-   - Tightly coupled to legacy reporting systems
-   - Complex but lower business risk
-   - LOW PRIORITY: Modernize after core engine is stable
+3. INVOICE-GEN.COB - Invoice generation
+   Tightly coupled to legacy reporting, modernize last
 
-BUSINESS RULES DISCOVERED:
-- Volume discounts trigger at 1000, 5000, 10000 unit thresholds
-- Tax calculations must round to nearest cent (regulatory requirement)
-- Customer tier changes only take effect at next billing cycle
-- Negative adjustments require manager approval workflow
+Key business rules:
+- Volume discounts: 1000, 5000, 10000 unit thresholds
+- Tax calculations round to nearest cent (regulatory)
+- Tier changes effective next billing cycle
+- Negative adjustments need manager approval
 
-RECOMMENDED APPROACH:
-Start with BILLING-CALC.COB - it's self-contained and contains the most critical business logic. I can help you convert this to modern Python while preserving all the business rules.
+Recommend starting with BILLING-CALC.COB - most critical and self-contained.
 ```
 
 ### Phase 2: Incremental Transformation
@@ -97,30 +83,16 @@ claude
 
 Example transformation conversation with session continuity:
 ```
-> Let's continue modernizing our billing system. Based on our previous analysis, 
-  let's now transform the BILLING-CALC.COB module. Please:
-  1. Convert the COBOL logic to modern Python
-  2. Preserve all the business rules exactly as they work now
-  3. Add proper error handling and logging
-  4. Use appropriate data types for financial calculations
-  5. Create the new Python module alongside the existing COBOL code
+> Convert BILLING-CALC.COB to Python. Preserve all business rules, add error handling, 
+  use proper financial data types.
 
-> I'll help you convert BILLING-CALC.COB to Python while preserving all business logic.
-  From our previous session, I remember we identified this as the core calculation 
-  engine with the discount thresholds and regulatory rounding requirements.
-  
-  Let me examine the COBOL code to understand the exact calculation methods...
+I'll convert the COBOL billing logic to Python while preserving the discount thresholds 
+and regulatory rounding requirements we identified.
 
-[Claude Code reads and analyzes the COBOL file, remembering context from previous sessions]
-
-Now I'll create a modern Python equivalent using the patterns we established...
-
-[Claude Code creates new files with the modernized code]
+[Reads BILLING-CALC.COB and creates modern Python equivalent]
 ```
 
-**Claude Code's Actual Generated Code:**
-
-Based on the COBOL analysis, Claude Code creates modern Python that preserves business logic:
+**Generated Python Code:**
 
 ```python
 # billing_engine.py - Generated by Claude Code
@@ -231,18 +203,13 @@ class ModernBillingEngine:
 Claude Code can generate comprehensive test suites to verify the modernized code produces identical results to the legacy system:
 
 ```
-> Now create comprehensive tests that prove this Python code produces 
-  exactly the same results as the original COBOL system. Include:
-  1. Tests for all the business logic scenarios
-  2. Boundary condition tests (exactly at discount thresholds)
-  3. Regulatory compliance tests (proper rounding)
-  4. Error handling tests
+> Create tests that prove this Python code produces the same results as the COBOL. 
+  Include business logic, boundary conditions, regulatory compliance, and error handling.
 
-> I'll create a comprehensive test suite that verifies business logic equivalence 
-  between the Python and COBOL implementations.
+I'll create tests that verify business logic equivalence between Python and COBOL.
 ```
 
-**Claude Code Generated Test Suite:**
+**Generated Test Suite:**
 
 ```python
 # test_billing_engine.py - Generated by Claude Code
@@ -341,32 +308,27 @@ claude
 
 Example ongoing conversation:
 ```
-> Now that we have the core billing engine working, let's modernize the 
-  customer tier service. Help me:
-  1. Analyze the CUSTOMER-TIER.COB file
-  2. Create a modern Python service that integrates with our new billing engine
-  3. Add proper API endpoints for customer tier management
-  4. Ensure backward compatibility during the transition
+> Modernize CUSTOMER-TIER.COB next. Create Python service that integrates with 
+  the billing engine, add API endpoints, ensure backward compatibility.
 
-> I'll help you modernize the customer tier service next. Let me examine 
-  CUSTOMER-TIER.COB to understand how it currently works...
+Analyzing CUSTOMER-TIER.COB structure and creating Python service...
 
-[Claude Code analyzes the next module and continues the modernization]
+[Analyzes module and creates modernized implementation]
 ```
 
-**Claude Code's Strengths for Legacy Modernization:**
+**Key Capabilities for Legacy Modernization:**
 
-- **Deep codebase understanding**: Reads and comprehends large legacy systems without manual file selection
-- **Preserves business logic**: Understands the intent behind legacy code and maintains it in modern implementations  
-- **Incremental approach**: Works on one module at a time, allowing gradual migration
-- **Real file editing**: Actually creates and modifies files in your project
-- **Git integration**: Can commit changes and create pull requests as modernization progresses
+- Deep codebase understanding without manual file selection
+- Preserves business logic and intent in modern implementations  
+- Incremental approach allowing gradual migration
+- Real file editing and project modification
+- Git integration for change management
 
 ## Overcoming Context Window Limitations
 
-**Strategic Modular Approach**: Claude Code understands your codebase and helps you code faster through natural language commands. Rather than trying to process entire legacy systems at once, work with Claude Code on logical business modules that fit within AI context windows. Most business logic modules are 1,000-5,000 lines and can be processed individually while maintaining business coherence.
+**Strategic Modular Approach**: Claude Code understands your codebase and helps you code faster through natural language commands. Rather than trying to process entire legacy systems at once, you can work with Claude Code on logical business modules that fit within AI context windows. Most business logic modules are 1,000-5,000 lines and can be processed individually while maintaining business coherence.
 
-**The `/compact` Command - Your Context Window Lifeline**: One of Claude Code's most powerful features for managing large legacy codebases is the `/compact` command. When working on complex modernization projects, your conversation history can quickly fill up with code snippets, analysis results, and implementation details. The `/compact` command intelligently condenses your conversation history while preserving critical information, immediately freeing up valuable context space.
+**The `/compact` Command - Your Context Window Lifeline**: One of Claude Code's most powerful features for managing large legacy codebases is the [`/compact` command](https://docs.anthropic.com/en/docs/claude-code/costs#reduce-token-usage). When working on complex modernization projects, your conversation history can quickly fill up with code snippets, analysis results, and implementation details. The `/compact` command intelligently condenses your conversation history while preserving critical information, immediately freeing up valuable context space.
 
 Here's how to use `/compact` effectively during legacy modernization:
 
@@ -376,42 +338,15 @@ claude
 
 # After extensive analysis and code generation, when context is getting full
 > /compact
-
-# Claude intelligently summarizes your conversation while preserving:
-# - Key business logic discoveries
-# - Code snippets and implementation details  
-# - Project structure insights
-# - Modernization decisions and rationale
+  ⎿  Compacted. ctrl+r to see full summary
 ```
 
-**What `/compact` Actually Does:**
-- **Intelligent summarization**: Rather than simply truncating history, Claude summarizes key points from earlier in the conversation
-- **Contextual preservation**: Maintains crucial details about your project structure, business rules, and modernization requirements
-- **Selective memory**: Prioritizes keeping code snippets and implementation details over general discussion
-- **Single-command execution**: One command handles everything - no need to manually decide what to keep or discard
-- **Session continuity**: You can continue working on the same modernization problem without starting over
-
-**Example `/compact` Usage in Legacy Modernization:**
-
-```
-# After analyzing a large COBOL system and generating Python code
-> I've been working on modernizing this billing system for a while and 
-  my context is getting full. Can you /compact our conversation so we 
-  can continue working on the customer tier service module?
-
-> I've compacted our conversation while preserving all the key information:
-
-PRESERVED CONTEXT:
-- Legacy billing system structure and business rules
-- COBOL-to-Python transformation approach for billing calculations
-- Generated Python classes (BillingCalculation, ModernBillingEngine)
-- Test cases that verify business logic equivalence
-- Regulatory compliance requirements (decimal rounding, tax calculations)
-- Next steps: modernizing CUSTOMER-TIER.COB module
-
-We can now continue with full context awareness but significantly more 
-available space. Ready to tackle the customer tier service?
-```
+**What `/compact` Does:**
+- Intelligently summarizes conversation history rather than truncating
+- Preserves crucial project details, business rules, and requirements
+- Prioritizes code snippets and implementation details  
+- Single command - no manual decisions needed
+- Maintains session continuity for ongoing work
 
 **Strategic Context Management for Large Codebases:**
 
@@ -423,36 +358,40 @@ available space. Ready to tackle the customer tier service?
 
 **Session Continuity**: Claude Code provides the `--continue` flag to automatically continue the most recent conversation. Combined with strategic use of `/compact`, this allows you to pick up complex modernization projects where you left off, maintaining context across multiple work sessions that can span days or weeks.
 
-## Bonus: Proprietary Enterprise Languages
+## Pro Tip #1: Proprietary Enterprise Languages
 
-One of the most challenging aspects of legacy modernization involves proprietary programming languages or domain-specific query languages that organizations developed internally. Claude Code's CLAUDE.md file provides the perfect solution for documenting these custom languages, enabling effective modernization even for the most obscure systems.
+One of the most challenging aspects of legacy modernization involves proprietary programming languages or domain-specific query languages that organizations developed internally. While Claude Code has deep knowledge of standard languages from its training data, it needs explicit documentation for custom languages your organization created. Claude Code's `CLAUDE.md` file provides the perfect solution for documenting these custom languages, enabling effective modernization even for the most obscure systems.
 
 ### Leveraging CLAUDE.md for Custom Language Documentation
 
-When you run `/init` in your project, Claude Code creates a CLAUDE.md file that serves as persistent memory for your project. This file is perfect for documenting proprietary language syntax, business rules, and modernization guidelines.
+When you run `/init` in your project, Claude Code creates a `CLAUDE.md` file that serves as persistent memory for your project. This file is perfect for documenting proprietary language syntax, business rules, and modernization guidelines.
 
-**Example CLAUDE.md for a Custom ETL Language:**
+**CLAUDE.md Template for Proprietary Languages:**
 
 ```markdown
-# Legacy ETL System Documentation
+# Project Modernization Guide
 
-## Proprietary Transform Language Syntax
-- EXTRACT filename: Read data files
-- TRANSFORM field_mappings: Apply business rules  
-- VALIDATE constraints: Data quality checks
-- LOAD target_system: Write transformed data
+## Proprietary Language Documentation
+### [Your Custom Language Name]
+- **Syntax reference**: Link to internal docs or attach language manual
+- **Key differences from standard languages**: Critical gotchas and non-standard behaviors
+- **Business logic patterns**: Domain-specific rules embedded in language constructs
+- **Legacy context**: Why certain patterns exist (regulatory, historical decisions)
 
-## Business Logic Patterns
-- All customer data requires PII encryption
-- Financial amounts must balance to penny
-- Failed validations trigger error reports
-- Audit trails required for compliance
+## Modernization Mapping
+### Language Translation Rules
+- Map proprietary constructs to modern equivalents
+- Document edge cases that require special handling
+- Preserve business logic that may be implicit in language design
 
-## Modernization Guidelines
-- Convert EXTRACT to pandas.read_csv()
-- Replace TRANSFORM with Python functions
-- Implement VALIDATE as data quality checks
-- Use modern databases for LOAD operations
+## Critical Business Rules
+- Extract business rules that are embedded in language syntax
+- Document regulatory requirements that shaped language behavior
+- Note historical context for seemingly arbitrary patterns
+
+## Testing Strategy
+- Define equivalence criteria for modernized vs legacy output
+- Identify critical test cases based on business logic complexity
 ```
 
 **Using the Documentation:**
@@ -462,14 +401,11 @@ claude
 ```
 
 ```
-> I need to modernize this legacy ETL script written in our proprietary language.
-  Use the syntax patterns documented in CLAUDE.md to convert this to modern Python:
+> Convert this legacy ETL script to Python using the patterns in CLAUDE.md:
 
 [paste legacy ETL code]
 
-> Based on your CLAUDE.md documentation, I understand your proprietary ETL 
-  language patterns. I'll convert this to modern Python while preserving
-  all the business rules like PII encryption and audit trail requirements...
+Converting based on your documented patterns. Preserving PII encryption and audit requirements...
 ```
 
 **Benefits:**
@@ -480,10 +416,63 @@ claude
 
 This approach transforms Claude Code into a specialized expert on your organization's unique technology stack, making even the most obscure legacy systems modernizable.
 
+## Pro Tip #2: Leverage Claude Code Subagents for Deep Analysis
+
+When dealing with massive legacy codebases, Claude Code's [subagent system](https://docs.anthropic.com/en/docs/claude-code/sub-agents) can dramatically improve your analysis and modernization workflow. Subagents are specialized AI assistants that can work independently on specific tasks while you focus on higher-level planning.
+
+**Perfect Use Cases for Subagents:**
+- **Codebase exploration**: Send a subagent to analyze an entire module or directory structure while you work on another component
+- **Dependency mapping**: Have a subagent trace all the dependencies and data flows for a specific business function
+- **Pattern extraction**: Task a subagent with finding all instances of a particular business rule or calculation pattern across the codebase
+- **Documentation generation**: Let a subagent create comprehensive documentation for a legacy module while you modernize another
+
+**Example Subagent Usage:**
+```bash
+claude
+```
+
+```
+> I need to understand how the inventory management system works. Can you use a 
+  subagent to analyze the entire inventory/ directory and create a report on:
+  - Key business logic patterns
+  - Data dependencies 
+  - Integration points with other systems
+
+I'll deploy a subagent to analyze your inventory system comprehensively.
+
+[Subagent works independently, analyzing files and creating detailed report]
+
+The subagent found the inventory system has 3 core modules with complex dependencies 
+on the billing system we just modernized. Here's the full analysis...
+```
+
+**Why This Matters for Legacy Modernization:**
+Subagents let you parallelize analysis work that would otherwise be sequential. While one subagent maps dependencies in the billing system, another can analyze the customer management module, and you can focus on architectural planning. This dramatically accelerates the discovery phase of modernization projects.
+
+## Critical Limitations and Where Human Expertise Remains Essential
+
+While AI accelerates modernization dramatically, it cannot replace human judgment in several critical areas:
+
+**What AI Handles Well:**
+- Syntax translation and pattern recognition across large codebases
+- Test generation for documented business logic
+- Consistent application of coding standards
+
+**Where Human Oversight Is Required:**
+- **Domain Knowledge**: Understanding *why* business rules exist and their regulatory context
+- **Hidden Dependencies**: Identifying undocumented system interactions, timing dependencies, and integration points
+- **Institutional Knowledge**: Explaining seemingly arbitrary logic that encodes decades of business evolution
+- **Risk Assessment**: Determining what's truly critical vs. what can tolerate changes
+
+**Realistic Expectations:**
+Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent.
+
+Think of AI as an incredibly capable junior developer who accelerates the work but needs guidance on business context and architectural decisions.
+
 ## Implementation Strategy
 
 **Start Small and Prove Value**
-Begin with a single, self-contained business module—ideally one that's causing maintenance pain but has clear input/output boundaries. Use this as a proof of concept to demonstrate that AI can preserve business logic while improving maintainability.
+Begin with a single, self-contained business module. Ideally one that's causing maintenance pain but has clear input/output boundaries. Use this as a proof of concept to demonstrate that AI can preserve business logic while improving maintainability.
 
 **Build Trust Through Testing**
 Generate comprehensive test suites that prove the modernized system produces identical results to the legacy system. This builds stakeholder confidence and catches edge cases that might otherwise cause production issues.
@@ -494,22 +483,26 @@ Design the modernization so that legacy and modern components can coexist. This 
 **Preserve Institutional Knowledge**
 Use AI to extract and document business rules that are often only implicit in the legacy code. This knowledge capture is often as valuable as the modernization itself.
 
-## The Strategic Advantage
+## Key Benefits
 
 Organizations that embrace AI-powered legacy modernization gain several critical advantages:
 
-**Speed**: Projects that traditionally took years can be completed in months. The AI handles the tedious work of syntax translation and pattern recognition, allowing human developers to focus on business logic validation and architectural decisions.
+**Speed**: AI significantly accelerates modernization by handling syntax translation and pattern recognition, allowing developers to focus on business logic validation and architectural decisions. While timeline compression is substantial, human involvement and oversight is still critical.
 
-**Risk Reduction**: AI can maintain functional equivalence while suggesting improvements, dramatically reducing the chance of introducing bugs during translation. Comprehensive test generation ensures that edge cases are caught before production deployment.
+**Risk Reduction**: AI helps maintain functional equivalence and generates comprehensive tests, reducing risks during translation. However, thorough validation with domain experts and extensive integration testing remains essential for business-critical systems.
 
-**Knowledge Preservation**: AI excels at extracting and documenting implicit business rules that are often lost during traditional modernization efforts. This institutional knowledge capture often proves as valuable as the modernization itself.
+**Knowledge Preservation**: AI helps extract and document business rules from code, but cannot capture the institutional knowledge and business context that exists only in human experience. Combining AI analysis with domain expert interviews is crucial for complete knowledge preservation.
 
-**Cost Efficiency**: The traditional approach requires specialists who understand both legacy technologies and modern frameworks—a rare and expensive combination. AI democratizes this expertise, allowing existing teams to tackle modernization projects.
+**Cost Efficiency**: The traditional approach requires specialists who understand both legacy technologies and modern frameworks. This is a rare and expensive combination. AI makes this expertise more accessible, allowing existing teams to tackle modernization projects.
 
 ## Conclusion
 
-Legacy code modernization with AI isn't science fiction—it's a practical capability available today. Tools like Claude Code represent the beginning of a new era where technical debt becomes manageable and legacy systems become assets rather than liabilities.
+The multi-step approach outlined here (systematic analysis, incremental transformation, and comprehensive testing) provides a practical framework for tackling even massive legacy systems.
 
-The key is approaching modernization as a translation problem rather than a rewriting problem. AI serves as the translator, understanding the intent and context of legacy systems while expressing that same functionality in modern, maintainable code. With strategic use of context management tools like `/compact`, comprehensive documentation in CLAUDE.md files, and incremental modular approaches, even the largest and most complex legacy systems become modernizable.
+Key success factors:
+- Break large systems into manageable modules that fit within AI context windows
+- Use `/compact` and `CLAUDE.md` to manage context and preserve institutional knowledge
+- Combine AI capabilities with human domain expertise. AI accelerates the work but cannot replace business context
+- Plan for iterative discovery as you uncover hidden dependencies and requirements
 
-For organizations sitting on valuable legacy systems, the question isn't whether to modernize—it's how quickly they can leverage AI to unlock the value trapped in decades of development work. The future belongs to organizations that can move fast without breaking things, and AI-powered modernization makes that future possible today.
+The organizations that succeed will be those that view AI as a powerful accelerator for existing modernization practices, not a replacement for careful planning and domain expertise. Start small, prove value with a self-contained module, and build from there.
