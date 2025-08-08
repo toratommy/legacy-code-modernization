@@ -460,32 +460,17 @@ While AI accelerates modernization dramatically, it cannot replace human judgmen
 
 Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent. Think of Claude Code as an incredibly capable junior developer who accelerates the work but needs guidance on business context and architectural decisions.
 
-## Implementation Strategy and Key Benefits
+## Putting It All Together
 
-The most successful legacy modernization projects follow a proven pattern: start small, build trust through testing, and scale systematically. Here's how AI-powered modernization delivers critical advantages:
+The systematic approach outlined here—using subagents for parallel analysis, custom project commands for consistent workflows, and strategic context management—transforms legacy modernization from a high-risk, multi-year undertaking into a manageable, iterative process.
 
-**Start Small and Prove Value**: Begin with a single, self-contained business module that's causing maintenance pain but has clear boundaries. This proves AI can preserve business logic while improving maintainability, building stakeholder confidence for larger initiatives.
+**Start Small, Scale Smart**: Begin with a single, self-contained business module that's causing maintenance pain but has clear boundaries. Use the three-phase methodology (analysis with subagents, transformation with custom commands, validation with comprehensive testing) to prove AI can preserve business logic while improving maintainability. This builds stakeholder confidence for larger initiatives.
 
-**Accelerated Timeline with Maintained Quality**: AI handles syntax translation and pattern recognition, allowing developers to focus on business logic validation and architectural decisions. While timeline compression is substantial, human oversight remains critical for:
-- Validating business rule preservation
-- Ensuring regulatory compliance requirements  
-- Managing integration points and dependencies
-- Making architectural decisions based on domain context
+**Critical Success Factors**:
+- **Leverage Claude Code systematically**: Use `/agents`, `/compact`, and custom project commands to manage complex workflows, not just as conveniences
+- **Balance AI acceleration with human expertise**: AI handles syntax translation and pattern recognition, but human oversight remains essential for validating business rules, ensuring regulatory compliance, and making architectural decisions
+- **Plan for iterative discovery**: Break large systems into manageable modules that fit within AI context windows, and expect to uncover hidden dependencies as you progress
 
-**Risk Reduction Through Comprehensive Testing**: Generate test suites that prove modernized systems produce identical results to legacy systems. This builds stakeholder confidence and catches edge cases before production, but requires thorough validation with domain experts for business-critical systems.
+**Why This Approach Works**: Traditional modernization requires rare specialists who understand both legacy technologies and modern frameworks. This AI-powered methodology makes that expertise more accessible, allowing existing teams to tackle modernization projects while maintaining gradual migration strategies that deliver immediate business value.
 
-**Knowledge Preservation and Documentation**: AI extracts and documents business rules that are often only implicit in legacy code - knowledge capture that's as valuable as the modernization itself. However, combining AI analysis with domain expert interviews is crucial for capturing institutional knowledge that exists only in human experience.
-
-**Cost Efficiency**: Traditional modernization requires rare specialists who understand both legacy technologies and modern frameworks. AI makes this expertise more accessible, allowing existing teams to tackle projects while maintaining gradual migration strategies that deliver immediate business value.
-
-## Conclusion
-
-The multi-step approach outlined here (systematic analysis, incremental transformation, and comprehensive testing) provides a practical framework for tackling even massive legacy systems.
-
-Key success factors:
-- Break large systems into manageable modules that fit within AI context windows
-- Use `/agents`,`/compact`, and custom project commands to manage complex workflows systematically
-- Combine AI capabilities with human domain expertise. AI accelerates the work but cannot replace business context
-- Plan for iterative discovery as you uncover hidden dependencies and requirements
-
-The organizations that succeed will be those that view AI as a powerful accelerator for existing modernization practices, not a replacement for careful planning and domain expertise. Start small, prove value with a self-contained module, and build from there.
+The organizations that succeed will be those that view Claude Code as an incredibly capable development accelerator—one that needs guidance on business context and architectural decisions, but dramatically speeds up the technical execution. Start small, prove value with a self-contained module, and scale from there.
