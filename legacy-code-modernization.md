@@ -162,9 +162,6 @@ Using Claude Code's file editing capabilities, session continuity features, and 
 ```bash
 # Continue your previous modernization session
 claude --continue
-
-# Or start a new transformation session
-claude
 ```
 
 Example transformation using custom command:
