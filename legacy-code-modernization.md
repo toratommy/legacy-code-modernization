@@ -537,7 +537,7 @@ The multi-step approach outlined here (systematic analysis, incremental transfor
 
 Key success factors:
 - Break large systems into manageable modules that fit within AI context windows
-- Use `/compact`, subagents, and custom project commands to manage complex workflows systematically
+- Use `/agents`,`/compact`, and custom project commands to manage complex workflows systematically
 - Combine AI capabilities with human domain expertise. AI accelerates the work but cannot replace business context
 - Plan for iterative discovery as you uncover hidden dependencies and requirements
 
