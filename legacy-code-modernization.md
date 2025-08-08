@@ -452,11 +452,11 @@ While AI accelerates modernization dramatically, it cannot replace human judgmen
 - Consistent application of coding standards
 
 **Where Human Oversight Is Required:**
-- **Domain Knowledge**: Understanding *why* business rules exist and their regulatory context
-- **Hidden Dependencies**: Identifying undocumented system interactions, timing dependencies, and integration points
-- **Institutional Knowledge**: Explaining seemingly arbitrary logic that encodes decades of business evolution
-- **Risk Assessment**: Determining what's truly critical vs. what can tolerate changes
-- **Security Considerations**: Review all generated code for hardcoded credentials or exposed sensitive data; ensure modern implementations maintain or improve security posture of legacy systems
+- Understanding *why* business rules exist and their regulatory context
+- Identifying *undocumented* system interactions, timing dependencies, and integration points
+- Explaining seemingly arbitrary logic that encodes decades of business evolution
+- Determining what's *truly critical* vs. what can tolerate changes
+- Review all generated code for hardcoded credentials or exposed sensitive data; ensure modern implementations maintain or improve security posture of legacy systems 
 
 **Realistic Expectations:**
 Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent.
