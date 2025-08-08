@@ -429,7 +429,7 @@ claude
   ⎿  Compacted. ctrl+r to see full summary
 ```
 
-Managing context effectively is critical for complex legacy modernization projects. Here are the key strategies:
+Managing context effectively is critical for complex legacy modernization projects. Here are some key strategies:
 
 - **Use `/compact` Strategically**: Intelligently summarizes conversation history while preserving crucial project details and business rules. Run it after completing analysis of major modules or when moving between transformation phases
 - **Continuous Context Building**: Claude Code automatically explores your codebase and maintains awareness of project structure - no need to manually add files to context
