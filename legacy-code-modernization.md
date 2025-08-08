@@ -429,8 +429,6 @@ claude
   ⎿  Compacted. ctrl+r to see full summary
 ```
 
-**Strategic Context Management for Large Codebases:**
-
 Managing context effectively is critical for complex legacy modernization projects. Here are the key strategies:
 
 - **Use `/compact` Strategically**: Intelligently summarizes conversation history while preserving crucial project details and business rules. Run it after completing analysis of major modules or when moving between transformation phases
