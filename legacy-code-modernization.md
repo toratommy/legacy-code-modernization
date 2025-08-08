@@ -9,16 +9,9 @@ This isn't a fringe problem. Nearly three-quarters (74%) of organizations fail t
 Claude Code changes this dynamic by treating modernization as a translation problem. AI can translate syntax while understanding business intent, recognizing architectural patterns, and reasoning about code at multiple abstraction levels, serving as an interpreter between different eras of software development.
 
 ## The Context Window Challenge
+The biggest practical obstacle in AI-powered legacy modernization isn't conceptual. It's computational. Enterprise codebases are too large for AI models to process entirely. A typical legacy system contains 500,000+ lines of business logic spread across hundreds of interdependent modules, with embedded business rules, complex database schemas, and integration points built up over decades.
 
-The biggest practical obstacle in AI-powered legacy modernization isn't conceptual. It's computational. Enterprise codebases are massive. Even the most advanced AI models can only process a fraction of that code in a single request. Consider a typical legacy system:
-
-- **500,000+ lines of core business logic** spread across hundreds of modules
-- **Complex interdependencies** where changes in one module can break seemingly unrelated functionality
-- **Embedded business rules** scattered throughout the codebase, often documented only in comments or variable names
-- **Database schemas** with hundreds of tables, stored procedures, and intricate relationships built up over decades
-- **Integration points** with other internal systems, each with their own data formats and protocols
-
-No LLM can process an entire enterprise codebase in one pass. A single business-critical module might be 5,000-10,000 lines of tightly coupled logic, pushing the boundaries of even large context windows. Successful modernization requires a strategic, multi-step approach. You need to break the problem into manageable pieces while preserving the relationships between them.
+Even individual business-critical modules can be 5,000-10,000 lines of tightly coupled logic, pushing the boundaries of even large context windows. Successful modernization requires breaking the problem into manageable pieces while preserving relationships between them—a strategic, multi-step approach rather than attempting wholesale transformation.
 
 ## Multi-Step Agentic Workflows: A Practical Approach
 
