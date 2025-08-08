@@ -61,7 +61,7 @@ First, create project-specific subagents using the `/agents` command:
 Opening subagent management interface...
 ```
 
-**Create Legacy Analysis Subagents:**
+**Create Subagents To Spin Off Tasks:**
 
 `.claude/agents/legacy-analyzer.md`:
 ```yaml
@@ -78,20 +78,7 @@ You are a specialist in legacy code analysis. Focus on:
 - Finding self-contained modules suitable for modernization
 ```
 
-`.claude/agents/dependency-mapper.md`:
-```yaml
----
-name: dependency-mapper
-description: Maps system dependencies, data flows, and integration points
-tools: Read, Grep, Glob
----
-
-You specialize in system architecture analysis. Focus on:
-- Mapping module-to-module dependencies
-- Tracing data flow between components
-- Identifying external system integration points
-- Documenting database schema relationships
-```
+Create similar subagents for `dependency-mapper` (system architecture analysis), `security-auditor` (compliance and vulnerability assessment), and so forth based on your specific modernization needs.
 
 **Using Subagents for Parallel Analysis:**
 ```
