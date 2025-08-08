@@ -441,14 +441,12 @@ claude
 
 **Strategic Context Management for Large Codebases:**
 
-**Use `/compact` at natural breakpoints**: Run `/compact` after completing analysis of a major module, before starting transformation of the next component, or when moving from coding to testing phases.
+Managing context effectively is critical for complex legacy modernization projects. Here are the key strategies:
 
-**Continuous Context Building**: No need to manually add files to context - Claude will explore your codebase as needed. Claude Code automatically maintains awareness of your project structure and can reference related files as needed during modernization sessions.
-
-
-**Incremental Migration Strategy**: Start with the most self-contained, business-critical modules. Each successfully modernized component provides context and confidence for the next phase. Use `/compact` between modules to maintain session continuity while managing context efficiently.
-
-**Session Continuity**: Claude Code provides the `--continue` flag to automatically continue the most recent conversation. Combined with strategic use of `/compact`, this allows you to pick up complex modernization projects where you left off, maintaining context across multiple work sessions that can span days or weeks.
+- **Use `/compact` at natural breakpoints**: Run `/compact` after completing analysis of a major module, before starting transformation of the next component, or when moving from coding to testing phases
+- **Continuous Context Building**: No need to manually add files to context - Claude will explore your codebase as needed and automatically maintains awareness of your project structure
+- **Incremental Migration Strategy**: Start with the most self-contained, business-critical modules. Each successfully modernized component provides context and confidence for the next phase  
+- **Session Continuity**: Use `claude --continue` to automatically continue your most recent conversation, maintaining context across multiple work sessions that can span days or weeks
 
 
 ## Critical Limitations and Where Human Expertise Remains Essential
