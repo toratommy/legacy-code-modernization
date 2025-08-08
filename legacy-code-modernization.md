@@ -415,14 +415,6 @@ class TestBillingEngineBusinessLogic:
 
 **Measuring Success**: Track functional equivalence (100% test pass rate), performance benchmarks against legacy systems, and reduced maintenance overhead as key modernization metrics. Document cost savings from eliminated legacy infrastructure and improved developer productivity.
 
-**Key Capabilities for Legacy Modernization:**
-
-- Deep codebase understanding without manual file selection
-- Preserves business logic and intent in modern implementations  
-- Incremental approach allowing gradual migration
-- Real file editing and project modification
-- Git integration for change management
-
 ## Overcoming Context Window Limitations
 
 **Strategic Modular Approach**: Claude Code understands your codebase and helps you code faster through natural language commands. Rather than trying to process entire legacy systems at once, you can work with Claude Code on logical business modules that fit within AI context windows. Most business logic modules are 1,000-5,000 lines and can be processed individually while maintaining business coherence.
