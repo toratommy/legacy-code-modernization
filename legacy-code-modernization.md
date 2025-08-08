@@ -458,9 +458,7 @@ While AI accelerates modernization dramatically, it cannot replace human judgmen
 - Determining what's *truly critical* vs. what can tolerate changes
 - Review all generated code for hardcoded credentials or exposed sensitive data; ensure modern implementations maintain or improve security posture of legacy systems 
 
-Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent.
-
-Think of AI as an incredibly capable junior developer who accelerates the work but needs guidance on business context and architectural decisions.
+Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent. Think of Claude Code as an incredibly capable junior developer who accelerates the work but needs guidance on business context and architectural decisions.
 
 ## Implementation Strategy
 
