@@ -417,7 +417,7 @@ class TestBillingEngineBusinessLogic:
 
 ## Overcoming Context Window Limitations
 
-**Strategic Modular Approach**: Claude Code understands your codebase and helps you code faster through natural language commands. Rather than trying to process entire legacy systems at once, you can work with Claude Code on logical business modules that fit within AI context windows. Most business logic modules are 1,000-5,000 lines and can be processed individually while maintaining business coherence.
+Claude Code understands your codebase and helps you code faster through natural language commands. Rather than trying to process entire legacy systems at once, you can work with Claude Code on logical business modules that fit within AI context windows. Most business logic modules are 1,000-5,000 lines and can be processed individually while maintaining business coherence.
 
 **The `/compact` Command - Your Context Window Lifeline**: One of Claude Code's most powerful features for managing large legacy codebases is the [`/compact` command](https://docs.anthropic.com/en/docs/claude-code/costs#reduce-token-usage). When working on complex modernization projects, your conversation history can quickly fill up with code snippets, analysis results, and implementation details. The `/compact` command intelligently condenses your conversation history while preserving critical information, immediately freeing up valuable context space.
 
