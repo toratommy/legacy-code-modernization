@@ -432,21 +432,14 @@ claude
   ⎿  Compacted. ctrl+r to see full summary
 ```
 
-**What `/compact` Does:**
-- Intelligently summarizes conversation history rather than truncating
-- Preserves crucial project details, business rules, and requirements
-- Prioritizes code snippets and implementation details  
-- Single command - no manual decisions needed
-- Maintains session continuity for ongoing work
-
 **Strategic Context Management for Large Codebases:**
 
 Managing context effectively is critical for complex legacy modernization projects. Here are the key strategies:
 
-- **Use `/compact` at natural breakpoints**: Run `/compact` after completing analysis of a major module, before starting transformation of the next component, or when moving from coding to testing phases
-- **Continuous Context Building**: No need to manually add files to context - Claude will explore your codebase as needed and automatically maintains awareness of your project structure
-- **Incremental Migration Strategy**: Start with the most self-contained, business-critical modules. Each successfully modernized component provides context and confidence for the next phase  
-- **Session Continuity**: Use `claude --continue` to automatically continue your most recent conversation, maintaining context across multiple work sessions that can span days or weeks
+- **Use `/compact` strategically**: Intelligently summarizes conversation history while preserving crucial project details and business rules. Run it after completing analysis of major modules or when moving between transformation phases
+- **Continuous Context Building**: Claude Code automatically explores your codebase and maintains awareness of project structure - no need to manually add files to context
+- **Incremental Migration Strategy**: Start with self-contained, business-critical modules. Each successfully modernized component provides context and confidence for the next phase  
+- **Session Continuity**: Use `claude --continue` to automatically resume your most recent conversation, maintaining context across multiple work sessions spanning days or weeks
 
 
 ## Critical Limitations and Where Human Expertise Remains Essential
