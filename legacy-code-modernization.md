@@ -456,7 +456,7 @@ While AI accelerates modernization dramatically, it cannot replace human judgmen
 - Identifying *undocumented* system interactions, timing dependencies, and integration points
 - Explaining seemingly arbitrary logic that encodes decades of business evolution
 - Determining what's *truly critical* vs. what can tolerate changes
-- Review all generated code for hardcoded credentials or exposed sensitive data; ensure modern implementations maintain or improve security posture of legacy systems 
+- Review all generated code for security vulnerabilities such as hardcoded credentials or exposed sensitive data; ensure modern implementations maintain or improve security posture of legacy systems (Pro Tip: while, human oversight is important for security reviews, try Claude Code's new [`/security-review` command](https://www.anthropic.com/news/automate-security-reviews-with-claude-code) to streamline your workflow)
 
 Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent. Think of Claude Code as an incredibly capable junior developer who accelerates the work but needs guidance on business context and architectural decisions.
 
