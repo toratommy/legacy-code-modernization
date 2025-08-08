@@ -148,11 +148,11 @@ description: Transform legacy module to modern equivalent while preserving busin
 
 Modernize the legacy code module $ARGUMENTS:
 
-1. **Analyze Business Logic**: Extract core calculations and validation rules
-2. **Modern Implementation**: Create equivalent modern code with proper error handling
-3. **Preserve Compliance**: Maintain regulatory requirements and audit trails
-4. **Add Testing**: Generate comprehensive test suite for equivalence validation
-5. **Documentation**: Update CLAUDE.md with patterns and decisions
+1. Analyze Business Logic: Extract core calculations and validation rules
+2. Modern Implementation: Create equivalent modern code with proper error handling
+3. Preserve Compliance: Maintain regulatory requirements and audit trails
+4. Add Testing: Generate comprehensive test suite for equivalence validation
+5. Documentation: Update CLAUDE.md with patterns and decisions
 
 Ensure 100% functional equivalence with the legacy implementation.
 ```
@@ -297,11 +297,11 @@ description: Generate comprehensive equivalence tests for modernized vs legacy c
 
 Generate comprehensive validation tests for $ARGUMENTS:
 
-1. **Equivalence Tests**: Verify identical behavior between legacy and modern implementations
-2. **Business Logic Tests**: Test all calculations, validations, and business rules
-3. **Edge Cases**: Cover boundary conditions, error scenarios, and regulatory edge cases
-4. **Performance Baseline**: Compare performance characteristics where relevant
-5. **Compliance Verification**: Ensure regulatory requirements are maintained
+1. Equivalence Tests: Verify identical behavior between legacy and modern implementations
+2. Business Logic Tests: Test all calculations, validations, and business rules
+3. Edge Cases: Cover boundary conditions, error scenarios, and regulatory edge cases
+4. Performance Baseline: Compare performance characteristics where relevant
+5. Compliance Verification: Ensure regulatory requirements are maintained
 
 Use parameterized tests for efficiency. Document any acceptable differences.
 ```
