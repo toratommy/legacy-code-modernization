@@ -1,7 +1,5 @@
 # Legacy Code Modernization with Claude Code: Breaking Through Context Window Barriers
 
-# Legacy Code Modernization with Claude Code: Breaking Through Context Window Barriers
-
 Every enterprise architect has faced the same challenge: mission-critical legacy systems like COBOL billing processing millions in daily transactions, VB6 payroll applications, and decade-old Java codebases that contain decades of fine-tuned business logic and regulatory compliance but run on aging, expensive-to-maintain foundations.
 
 This isn't a fringe problem. Nearly three-quarters (74%) of organizations fail to complete legacy modernization initiatives ([Businesswire](https://www.businesswire.com/news/home/20200528005186/en/74-Of-Organizations-Fail-to-Complete-Legacy-System-Modernization-Projects-New-Report-From-Advanced-Reveals)). Traditional approaches require armies of developers manually translating code line by line, often taking years and costing millions. The fundamental challenge isn't converting syntax but preserving decades of embedded business logic and institutional knowledge while adapting to modern architectures.
