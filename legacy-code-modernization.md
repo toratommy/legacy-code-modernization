@@ -38,7 +38,7 @@ claude
 # > /init
 ```
 
-This creates a `CLAUDE.md` file that serves as persistent memory for your project - essential for documenting business rules, proprietary language patterns, and modernization decisions that need to survive across multiple sessions.
+This creates a `CLAUDE.md` file that serves as persistent memory for your project - essential for documenting business rules, proprietary language patterns, and modernization decisions that need to survive across multiple sessions. For systems with custom or proprietary languages, use this file to document key syntax patterns and domain-specific logic, or alternatively, link to existing internal documentation pages that Claude can reference during modernization.
 
 Claude Code can then analyze your legacy codebase to understand its structure and create a modernization plan. Using Claude Code's planning capabilities, you can get a comprehensive strategy before diving into implementation:
 
@@ -445,31 +445,6 @@ claude
 
 **Continuous Context Building**: No need to manually add files to context - Claude will explore your codebase as needed. Claude Code automatically maintains awareness of your project structure and can reference related files as needed during modernization sessions.
 
-**Documenting Proprietary Languages**: When modernizing systems with custom or proprietary languages, use the CLAUDE.md file created by `/init` to document syntax, business rules, and patterns. Combined with specialized subagents, this transforms Claude Code into a comprehensive expert on your organization's unique technology stack:
-
-```markdown
-# Project Modernization Guide
-
-## Proprietary Language Documentation
-### [Your Custom Language Name]
-- **Syntax reference**: Key language patterns and constructs
-- **Business rules**: Domain-specific logic embedded in the language
-- **Migration patterns**: Proven approaches for modernizing this language
-
-## Subagent Configuration
-- Created legacy-analyzer and dependency-mapper subagents in .claude/agents/
-- Subagents specialize in focused analysis with separate context windows
-- Use for parallel exploration of large codebases without context pollution
-
-## Custom Project Commands
-- /modernize-module: Systematic transformation following established methodology
-- /validate-equivalence: Comprehensive equivalence testing for legacy vs modern code
-- Stored in .claude/commands/ for team-wide consistency and repeatability
-
-## Critical Business Rules
-- Regulatory requirements that shaped language behavior
-- Historical context for seemingly arbitrary patterns
-```
 
 **Incremental Migration Strategy**: Start with the most self-contained, business-critical modules. Each successfully modernized component provides context and confidence for the next phase. Use `/compact` between modules to maintain session continuity while managing context efficiently.
 
