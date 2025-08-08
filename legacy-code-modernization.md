@@ -407,13 +407,10 @@ claude
   ⎿  Compacted. ctrl+r to see full summary
 ```
 
-Managing context effectively is critical for complex legacy modernization projects. Here are some key strategies:
+Managing context effectively is critical for complex legacy modernization projects:
 
-- **Use `/compact` Strategically**: Intelligently summarizes conversation history while preserving crucial project details and business rules. Run it after completing analysis of major modules or when moving between transformation phases
-- **Continuous Context Building**: Claude Code automatically explores your codebase and maintains awareness of project structure - no need to manually add files to context
-- **Incremental Migration Strategy**: Start with self-contained, business-critical modules. Each successfully modernized component provides context and confidence for the next phase  
-- **Session Continuity**: Use `claude --continue` to automatically resume your most recent conversation, maintaining context across multiple work sessions spanning days or weeks
-
+- **Use `/compact` strategically**: Run it after completing analysis of major modules or when moving between transformation phases to preserve crucial project details while freeing context space
+- **Start with self-contained modules**: Each successfully modernized component provides context and confidence for the next phase, using `claude --continue` to maintain continuity across work sessions
 
 ## What AI Can Do Well (And Where You Still Need Human Insight)
 
