@@ -442,23 +442,13 @@ Managing context effectively is critical for complex legacy modernization projec
 - **Session Continuity**: Use `claude --continue` to automatically resume your most recent conversation, maintaining context across multiple work sessions spanning days or weeks
 
 
-## Critical Limitations and Where Human Expertise Remains Essential
+## What AI Can Do Well (And Where You Still Need Human Insight)
 
-While AI accelerates modernization dramatically, it cannot replace human judgment in several critical areas:
+Claude Code excels at the technical heavy lifting of modernization—translating COBOL constructs to modern Python, generating comprehensive test suites, spotting patterns across thousands of lines of code, and applying coding standards consistently. But every legacy system has nuances that only make sense to the people who've worked with them over the years. The real challenge comes with the context that lives between the lines—understanding why certain business rules exist, identifying undocumented system interactions, and knowing which components are genuinely critical versus which ones just seem important.
 
-**What AI Handles Well:**
-- Syntax translation and pattern recognition across large codebases
-- Test generation for documented business logic
-- Consistent application of coding standards
+This is where domain expertise becomes invaluable: interpreting the regulatory context behind business rules, recognizing timing dependencies that only surface during peak processing periods, explaining logic that appears arbitrary but actually encodes years of business evolution, and making informed decisions about what can be safely modernized. Security reviews also benefit from human judgment - while Claude Code can help identify potential vulnerabilities (check out the new [`/security-review` command](https://www.anthropic.com/news/automate-security-reviews-with-claude-code)), architectural security decisions and ensuring improved security postures require experienced oversight.
 
-**Where Human Oversight Is Required:**
-- Understanding *why* business rules exist and their regulatory context
-- Identifying *undocumented* system interactions, timing dependencies, and integration points
-- Explaining seemingly arbitrary logic that encodes decades of business evolution
-- Determining what's *truly critical* vs. what can tolerate changes
-- Review all generated code for security vulnerabilities such as hardcoded credentials or exposed sensitive data; ensure modern implementations maintain or improve security posture of legacy systems (tip: while, human oversight is important for security reviews, try Claude Code's new [`/security-review` command](https://www.anthropic.com/news/automate-security-reviews-with-claude-code) to streamline your workflow)
-
-Legacy systems contain evolutionary patches, workarounds, and implicit knowledge that defies code analysis. Successful modernization requires AI working alongside domain experts, not replacing them. Plan for iterative discovery. You'll uncover requirements and constraints that weren't initially apparent. Think of Claude Code as an incredibly capable junior developer who accelerates the work but needs guidance on business context and architectural decisions.
+The key insight is that legacy systems contain evolutionary patches, workarounds, and institutional knowledge that often isn't captured in the code itself. Successful modernization combines AI acceleration with domain expertise. Plan for iterative discovery—you'll uncover requirements and constraints that weren't initially apparent. Think of Claude Code as a highly capable development partner that excels at technical execution but benefits from your guidance on business context and architectural decisions.
 
 ## Putting It All Together
 
